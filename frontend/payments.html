@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASUED Portal - Payments</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LASUED Portal</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="payments.html" class="active">Payments</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>School Fees Payment</h1>
+
+        <!-- Payment Summary Card -->
+        <div class="card">
+            <h3>Payment Summary</h3>
+            <div class="payment-summary">
+                <div class="summary-item">
+                    <strong>Total Paid:</strong>
+                    <span id="totalPaid" class="amount">₦0</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Total Pending:</strong>
+                    <span id="totalPending" class="amount warning">₦0</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Total Transactions:</strong>
+                    <span id="totalTransactions">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Make Payment Section -->
+        <div class="card">
+            <h3>Make Payment</h3>
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="amount">Amount (₦)</label>
+                    <input type="number" id="amount" name="amount" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" placeholder="e.g., First Semester Tuition" required>
+                </div>
+                <div class="form-group">
+                    <label for="paymentMethod">Payment Method</label>
+                    <select id="paymentMethod" name="paymentMethod">
+                        <option value="bank_transfer">Bank Transfer</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="cash">Cash Payment</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Process Payment</button>
+                <p class="error-message" id="paymentError"></p>
+                <p class="success-message" id="paymentSuccess"></p>
+            </form>
+        </div>
+
+        <!-- Payment History -->
+        <div class="card">
+            <h3>Payment History</h3>
+            <table id="paymentsTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Reference</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentsBody">
+                </tbody>
+            </table>
+            <p id="noPayments" class="info-message">No payment records found.</p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/payments.js"></script>
+</body>
+</html>

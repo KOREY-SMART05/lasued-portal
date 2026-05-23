@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASUED Portal - Courses</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LASUED Portal</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Course Registration</h1>
+
+        <!-- Registered Courses Section -->
+        <div class="card">
+            <h3>Your Registered Courses</h3>
+            <table id="registeredCoursesTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Semester</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="registeredCoursesBody">
+                </tbody>
+            </table>
+            <p id="noRegistered" class="info-message">No courses registered yet.</p>
+        </div>
+
+        <!-- Available Courses Section -->
+        <div class="card">
+            <h3>Available Courses</h3>
+            <div class="semester-filter">
+                <label for="semesterFilter">Filter by Semester:</label>
+                <select id="semesterFilter" onchange="filterCourses()">
+                    <option value="">All Semesters</option>
+                    <option value="1">Semester 1</option>
+                    <option value="2">Semester 2</option>
+                </select>
+            </div>
+            <table id="availableCoursesTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Semester</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="availableCoursesBody">
+                </tbody>
+            </table>
+            <p id="noAvailable" class="info-message">No courses available.</p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/courses.js"></script>
+</body>
+</html>

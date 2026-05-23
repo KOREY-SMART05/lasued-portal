@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASUED Portal - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LASUED Portal - Admin</div>
+            <ul class="nav-menu">
+                <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="admin-students.html">Students</a></li>
+                <li><a href="admin-results.html">Results</a></li>
+                <li><a href="admin-payments.html">Payments</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <h3>Total Students</h3>
+                <div class="stat-number" id="totalStudents">--</div>
+                <a href="admin-students.html" class="btn-secondary">View All</a>
+            </div>
+            <div class="card">
+                <h3>Pending Payments</h3>
+                <div class="stat-number warning" id="pendingPayments">--</div>
+                <a href="admin-payments.html" class="btn-secondary">View Details</a>
+            </div>
+            <div class="card">
+                <h3>Total Courses</h3>
+                <div class="stat-number" id="totalCourses">--</div>
+                <a href="admin-courses.html" class="btn-secondary">Manage</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

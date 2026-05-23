@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASUED Portal - Results</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">LASUED Portal</div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="results.html" class="active">Results</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="payments.html">Payments</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Academic Results</h1>
+        
+        <div class="card">
+            <h3>GPA Summary</h3>
+            <div class="gpa-summary">
+                <div class="gpa-item">
+                    <strong>Overall GPA:</strong>
+                    <span id="overallGpa">--</span>
+                </div>
+                <div class="gpa-item">
+                    <strong>Courses Completed:</strong>
+                    <span id="coursesCompleted">0</span>
+                </div>
+                <div class="gpa-item">
+                    <strong>Highest Grade:</strong>
+                    <span id="highestGpa">--</span>
+                </div>
+                <div class="gpa-item">
+                    <strong>Lowest Grade:</strong>
+                    <span id="lowestGpa">--</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>All Results</h3>
+            <table id="resultsTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Score</th>
+                        <th>Grade</th>
+                        <th>GPA</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                </tbody>
+            </table>
+            <p id="noResults" class="info-message">No results available yet.</p>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/results.js"></script>
+</body>
+</html>
